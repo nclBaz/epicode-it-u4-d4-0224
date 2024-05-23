@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.Objects;
+
 public abstract class Animal {
 	// Abstract <-- non si possono creare oggetti di tipo Animal
 	// Evidentemente non ne abbiamo bisogno e non sarebbe neanche magari sensato avere oggetti così "generici"
@@ -43,4 +45,13 @@ public abstract class Animal {
 				", age=" + age +
 				'}';
 	}
+
+	@Override
+	public boolean equals(Object o) { // <-- Esempio di polimorfismo
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Animal animal = (Animal) o; // <-- qua posso fare un cast da Object a Animal perché alla riga precedente con un if ho controllato che la classe sia la stessa
+		return age == animal.age && Objects.equals(name, animal.name);
+	}
+
 }
