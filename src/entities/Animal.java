@@ -21,4 +21,12 @@ public class Animal {
 	public void sayYourName() {
 		System.out.println("Ciao sono un animale e mi chiamo " + this.name);
 	}
+
+	@Override
+	public String toString() {
+		return "Animal{" +
+				"name='" + name + '\'' +
+				", age=" + age +
+				'}';
+	}
 }

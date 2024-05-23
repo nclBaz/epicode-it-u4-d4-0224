@@ -22,5 +22,12 @@ public class Main {
 
 		rex.bark();
 		rex.isACop = true;
+
+		System.out.println(rex);
+
+		// OVERLOAD
+		felix.walk(2);
+		felix.walk();
+	
 	}
 }
