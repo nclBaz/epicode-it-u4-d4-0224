@@ -1,6 +1,8 @@
 package entities;
 
-public class Cat extends Animal {
+import interfaces.Jumper;
+
+public class Cat extends Animal implements Jumper {
 	// Eredito name, age e i metodi dal padre
 	// Possiamo anche aggiungere tutta una serie di caratteristiche proprie dei gatti
 	public boolean hasBoots;
@@ -26,6 +28,14 @@ public class Cat extends Animal {
 		System.out.println("Ciao sono un GATTO e mi chiamo " + this.name);
 	}
 
+	@Override
+	public void getInfo() {
+		System.out.println("Il mio nome è: " + this.name);
+		System.out.println("La mia età é: " + this.age);
+		System.out.println("Sono un gatto con gli stivali?" + this.hasBoots);
+		this.meow();
+	}
+
 	public void walk() {
 		System.out.println("Ciao sono un gatto e sto camminando");
 	}
@@ -35,4 +45,8 @@ public class Cat extends Animal {
 		System.out.println("Ciao sono un gatto e camminerò per " + numPassi + " passi");
 	}
 
+	@Override
+	public void jump() {
+		System.out.println("Ciao sono un gatto e sto saltando");
+	}
 }

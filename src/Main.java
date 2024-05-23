@@ -5,8 +5,8 @@ import entities.Dog;
 public class Main {
 	public static void main(String[] args) {
 
-		Animal a = new Animal("Nome", 20);
-		a.sayYourName();
+/*		Animal a = new Animal("Nome", 20);
+		a.sayYourName();*/
 
 		Cat felix = new Cat("Felix", 13);
 		felix.sayYourName();
@@ -28,6 +28,9 @@ public class Main {
 		// OVERLOAD
 		felix.walk(2);
 		felix.walk();
-	
+
+		felix.getInfo();
+		rex.getInfo();
+
 	}
 }
